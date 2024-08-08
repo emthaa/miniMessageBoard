@@ -17,5 +17,5 @@ app.use("/",indexRouter) //mounts router at /
 app.use("/new",newRouter) //mounts router at /new
 app.use("/messages",openRouter)
 
-const PORT = 3005;
+const PORT = 8000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
