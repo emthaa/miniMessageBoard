@@ -1,9 +1,6 @@
 const { Router } = require("express");
 const newRouter = Router();
+const appController = require("../controllers/appController")
+newRouter.get("/", appController.newRouterGet);
 
-newRouter.get("/",(req,res) =>{
-    res.render("form");
-})
-
-
-module.exports = newRouter
+module.exports = newRouter;

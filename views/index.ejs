@@ -1,15 +1,15 @@
 <ul>
-  <% messages.forEach(message => { %>
-    <li>
-      <div class="message-info-wrapper">
-        <h2><%= message.user %></h2>
-        <p><%= message.text %></p>
-        <p><%= message.added %></p>
-      </div>
-      <a href="/messages/<%= message.id %>">
-        <button>Open</button>
-      </a>
-    </li>
+  <% fetchedUsers.forEach(user => { %>
+  <li>
+    <div class="message-info-wrapper">
+      <h2><%= user.username %></h2>
+      <p><%= user.message %></p>
+      <p><%= user.date %></p>
+    </div>
+    <a href="/messages/<%= user.id %>">
+      <button>Open</button>
+    </a>
+  </li>
   <% }); %>
 </ul>
 <a href="/new">New Post</a>
